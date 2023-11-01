@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",    
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.scss",
+    ".next/types/**/*.ts", "src/hooks/phoneAuth.js", "src/pages/phone-auth.tsx", "src/hooks/sampleUseAuth.ts",        
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
