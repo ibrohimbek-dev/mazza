@@ -26,7 +26,7 @@ const MyModal = () => {
         <div className="image-container">
           <Image
             className="img-contain rounded"
-            src={currentFood?.image?.src}
+            src={currentFood?.image}
             alt={`Taom nomi ${currentFood.name}`}
           />
         </div>
