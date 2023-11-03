@@ -34,7 +34,7 @@ const Testimonial = () => {
       >
         <div className="container">
           <div className="text-center">
-            <h5 className="section-title ff-secondary text-center text-primary fw-normal">
+            <h5 className="section-title ff-secondary text-center text-success fw-normal">
               Mijozlarimizdan tashakkurnomalar
             </h5>
             <h1 className="mb-5">Mijozlarimiz Biz Haqimizda!!!</h1>

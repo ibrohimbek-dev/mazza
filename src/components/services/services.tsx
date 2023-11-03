@@ -1,10 +1,11 @@
 import Head from "next/head";
 import React from "react";
+import { FaUserTie, FaUtensils, FaCartPlus, FaHeadset } from "react-icons/fa";
 
 const Services = () => {
   return (
     <>
-      <Head>        
+      <Head>
         <meta name="description" content="Mazza restorani xizmatlar bo'limi" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -12,7 +13,7 @@ const Services = () => {
       <div id="services" className="container-xxl py-5">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 className="section-title ff-secondary text-center text-info fw-normal">
+            <h5 className="section-title ff-secondary text-center text-success fw-normal">
               Our Services
             </h5>
             <h1 className="mb-5">Explore Our Services</h1>
@@ -24,7 +25,7 @@ const Services = () => {
             >
               <div className="service-item rounded pt-3">
                 <div className="p-4">
-                  <i className="fa fa-3x fa-user-tie text-info mb-4"></i>
+                  <FaUserTie className="text-success mb-4" size={48} />
                   <h5>Ma'lakali Povurlar</h5>
                   <p>Ma'alaki oshpazlarimiz endi sizning xizmatingizda</p>
                 </div>
@@ -36,7 +37,7 @@ const Services = () => {
             >
               <div className="service-item rounded pt-3">
                 <div className="p-4">
-                  <i className="fa fa-3x fa-utensils text-info mb-4"></i>
+                  <FaUtensils className="text-success mb-4" size={48} />{" "}
                   <h5>Ma'zali Taom</h5>
                   <p>Mazza nomli oshxanamizda ma'zali taomlardan bahra oling</p>
                 </div>
@@ -48,7 +49,7 @@ const Services = () => {
             >
               <div className="service-item rounded pt-3">
                 <div className="p-4">
-                  <i className="fa fa-3x fa-cart-plus text-info mb-4"></i>
+                  <FaCartPlus className="text-success mb-4" size={48} />{" "}
                   <h5>Onlayn Xarid</h5>
                   <p>
                     Endi taom yoki O'rindiqlarni onlayn xarid yoki buyurtma
@@ -63,7 +64,7 @@ const Services = () => {
             >
               <div className="service-item rounded pt-3">
                 <div className="p-4">
-                  <i className="fa fa-3x fa-headset text-info mb-4"></i>
+                  <FaHeadset className="text-success mb-4" size={48} />{" "}
                   <h5>24/7 Xizmat</h5>
                   <p>Biz siz uchun 24 / 7 xizmatingizdamiz</p>
                 </div>

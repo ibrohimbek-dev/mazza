@@ -3,6 +3,6 @@ export interface MenuItem {
   name?: string;
   price?: number;
   desc?: string;
-  vote?: number;  
-  itemId?: string;  
+  vote?: number;
+  itemId?: string;
 }

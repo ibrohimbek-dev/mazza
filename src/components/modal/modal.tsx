@@ -7,10 +7,11 @@ import { useInfoStore } from "@/store";
 
 const MyModal = () => {
   const { modal, setModal, currentFood } = useInfoStore();
-  
+
   const handleClose = () => {
     setModal(false);
   };
+
 
   return (
     <Modal
@@ -28,6 +29,8 @@ const MyModal = () => {
             className="img-contain rounded"
             src={currentFood?.image}
             alt={`Taom nomi ${currentFood.name}`}
+            width={500}
+            height={500}
           />
         </div>
         <div className="w-100 d-flex flex-column text-start mt-3">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 import teamOne from "@/img/team-1.jpg";
 import teamTwo from "@/img/team-2.jpg";
@@ -11,7 +12,7 @@ import Head from "next/head";
 const Teams = () => {
   return (
     <>
-      <Head>        
+      <Head>
         <meta name="description" content="Mazza restoran jamoasi" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -19,7 +20,7 @@ const Teams = () => {
       <div id="team" className="container-xxl pt-5 pb-3">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 className="section-title ff-secondary text-center text-primary fw-normal">
+            <h5 className="section-title ff-secondary text-center text-success fw-normal">
               Bizning Jamoa
             </h5>
             <h1 className="mb-5">Bizning Mahoratli Oshpazlarimiz</h1>
@@ -37,14 +38,11 @@ const Teams = () => {
                 <small>Manzil & Status</small>
                 <div className="d-flex justify-content-center mt-3">
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-facebook-f"></i>
-                  </Link>
+                  <FaFacebookF />                  </Link>
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-twitter"></i>
-                  </Link>
+                  <FaTwitter />                  </Link>
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-instagram"></i>
-                  </Link>
+                  <FaInstagram />                  </Link>
                 </div>
               </div>
             </div>
@@ -60,13 +58,13 @@ const Teams = () => {
                 <small>Manzil & Status</small>
                 <div className="d-flex justify-content-center mt-3">
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-facebook-f"></i>
+                    <FaFacebookF />
                   </Link>
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-twitter"></i>
+                    <FaTwitter />{" "}
                   </Link>
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-instagram"></i>
+                    <FaInstagram />{" "}
                   </Link>
                 </div>
               </div>
@@ -83,13 +81,13 @@ const Teams = () => {
                 <small>Manzil & Status</small>
                 <div className="d-flex justify-content-center mt-3">
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-facebook-f"></i>
+                    <FaFacebookF />{" "}
                   </Link>
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-twitter"></i>
+                    <FaTwitter />{" "}
                   </Link>
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-instagram"></i>
+                    <FaInstagram />{" "}
                   </Link>
                 </div>
               </div>
@@ -106,13 +104,13 @@ const Teams = () => {
                 <small>Manzil & Status</small>
                 <div className="d-flex justify-content-center mt-3">
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-facebook-f"></i>
+                    <FaFacebookF />{" "}
                   </Link>
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-twitter"></i>
+                    <FaTwitter />{" "}
                   </Link>
                   <Link className="btn btn-square btn-success mx-1" href={""}>
-                    <i className="fab fa-instagram"></i>
+                    <FaInstagram />{" "}
                   </Link>
                 </div>
               </div>

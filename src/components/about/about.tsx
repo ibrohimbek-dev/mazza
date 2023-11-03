@@ -7,6 +7,7 @@ import aboutThree from "../../img/about-3.jpg";
 import aboutFour from "../../img/about-4.jpg";
 import Image from "next/image";
 import Head from "next/head";
+import { FaUtensils } from "react-icons/fa";
 
 const About = () => {
   useCountUp({
@@ -78,7 +79,7 @@ const About = () => {
               </h5>
               <h1 className="mb-4">
                 Oshxonamizga{" "}
-                <i className="fa fa-utensils text-success me-2"></i>
+                <FaUtensils className="text-success mb-4" size={48} />{" "}
                 Xush kelibsiz
               </h1>
               <p className="mb-4">

@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "clean": "rimraf .next",
     "lint": "next lint",
     "export": "next export"
   },
@@ -83,6 +84,7 @@
     "eslint": "^8.51.0",
     "eslint-config-next": "latest",
     "postcss-loader": "^7.3.3",
+    "rimraf": "^5.0.5",
     "style-loader": "^3.3.3",
     "ts-loader": "^9.5.0",
     "typescript": "^5.2.2"

@@ -9,12 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaTrash } from "react-icons/fa";
 
-import {
-  doc,
-  getDocs,
-  deleteDoc,
-  collection,  
-} from "firebase/firestore";
+import { doc, getDocs, deleteDoc, collection } from "firebase/firestore";
 import { db } from "@/firebase/firebase.config";
 import Image from "next/image";
 import IncDec from "@/helpers/inc-dec";
@@ -89,7 +84,7 @@ const Cart = () => {
   };
 
   const removeItem = async (itemId: string) => {
-    try {      
+    try {
       const userId = user?.uid;
       if (userId && itemId) {
         const documentRef = doc(db, user?.uid, itemId);
@@ -125,7 +120,6 @@ const Cart = () => {
                 <th scope="col">Miqdori</th>
                 <th scope="col">Narx</th>
                 <th scope="col">Surat</th>
-                
               </tr>
             </thead>
             <tbody>
@@ -137,15 +131,18 @@ const Cart = () => {
 
                     <td>{item.product.desc}</td>
                     <td className="text-danger text-bold pointer">
-                      <IncDec/>
-                    </td>                    
-                    <td className="text-danger text-bold">₩. {item.product.price}</td>                    
+                      <IncDec />
+                    </td>
+                    <td className="text-danger text-bold">
+                      ₩. {item.product.price}
+                    </td>
                     <td>
                       <Image
                         src={item.product.image || ""}
                         alt={item.product.desc || ""}
-                        className="img-fluid rounded"
-                        style={{ maxWidth: "100px" }}
+                        className="img-fluid rounded food-image"
+                        width={500}
+                        height={500}
                       />
                     </td>
                     <td>
@@ -171,7 +168,10 @@ const Cart = () => {
         </>
       )}
       <div className="mt-5 cart-section-links">
-        <button className="btn btn-danger mt-2 btn-block" onClick={handleSignOut}>
+        <button
+          className="btn btn-danger mt-2 btn-block"
+          onClick={handleSignOut}
+        >
           <FiLogOut className="me-2" />
           A'zolikni bekor qilish
         </button>
@@ -183,7 +183,11 @@ const Cart = () => {
           <FiShare2 className="me-2" />
           Ulashish
         </button>
-        <Link href="/#menu" className="btn mt-2 btn-secondary btn-block" passHref>
+        <Link
+          href="/#menu"
+          className="btn mt-2 btn-secondary btn-block"
+          passHref
+        >
           <BiFoodMenu className="me-2" />
           Taomnoma
         </Link>

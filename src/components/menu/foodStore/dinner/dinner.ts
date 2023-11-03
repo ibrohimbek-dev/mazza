@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { MenuItem } from "../../menu.props";
 import { v4 as uuidv4 } from "uuid";
+import { getDownloadURL, ref } from "firebase/storage";
+import { storage } from "@/firebase/firebase.config";
 
 const useDinnerFood = (): MenuItem[] => {
   const [dinnerFood, setDinnerFood] = useState<MenuItem[]>([]);
@@ -46,11 +48,22 @@ const useDinnerFood = (): MenuItem[] => {
 
     const importImages = async () => {
       const importedImages = await Promise.all(
-        menuItemsData.map( async (menuItem) => {
+        menuItemsData.map(async (menuItem) => {
           const itemId = uuidv4();
           const { image, ...otherData } = menuItem;
-          const imageModule = await import(`@/components/menu/foodStore/dinner/dinnerImgs/${image}`);
-          return { ...otherData, image: imageModule.default, itemId };
+
+          try {
+            // Construct a reference to the image in Firebase Storage
+            const imageRef = ref(storage, `mazza-food-images/dinner/${image}`);            
+
+            // Fetch the download URL for the image
+            const url = await getDownloadURL(imageRef);
+
+            return { ...otherData, image: url, itemId };
+          } catch (error) {
+            console.error("Error fetching image from Firebase Storage:", error);
+            return { ...otherData, image: "", itemId };
+          }
         })
       );
       setDinnerFood(importedImages);

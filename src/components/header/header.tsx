@@ -7,15 +7,15 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import Link from "next/link";
 import { auth } from "@/firebase/firebase.config";
 import { AuthContext } from "@/context/auth.context";
-
+import Image from "next/image";
+import { FaUtensils } from "react-icons/fa";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState<string>("");
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const { user: currentUser } = useContext(AuthContext);
-  const userId = currentUser?.uid
-    
+  const userId = currentUser?.uid;
 
   const scrollTop = () => {
     scroll.scrollToTop();
@@ -74,13 +74,16 @@ const Header = () => {
             onClick={scrollTop}
           >
             <div className="d-flex align-items-center">
-              <img
+              <Image
                 src="/logo.png"
+                width={54}
+                height={50}
                 alt="logo"
                 className="img-contain h-auto w-auto cursor-pointer rounded-circle mx-4"
               />
-              <h1 className="text-success m-0">
-                <i className="fa fa-utensils text-bold me-3"></i>Mazza
+              <h1 className="text-success d-flex align-items-center m-0">
+                <FaUtensils className="text-bold me-3" />
+                Mazza
               </h1>
             </div>
           </div>

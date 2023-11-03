@@ -75,6 +75,8 @@ const Thumbnail = ({ food, index, isBig = false }: ThumbnailProps) => {
         className="flex-shrink-0 p-1 img-fluid rounded food-image"
         src={food.image || ""}
         alt={`Taom nomi ${food.name}`}
+        width={500}
+        height={500}
       />
       <div className="w-100 d-flex flex-column text-start food-content">
         <h5 className="d-flex justify-content-between border-bottom pb-2">

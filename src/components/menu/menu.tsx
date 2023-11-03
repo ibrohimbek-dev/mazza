@@ -4,15 +4,15 @@ import useBreakfastFood from "./foodStore/breakfast/breakfast";
 import useLunchFood from "./foodStore/lunch/lunch";
 import useDinnerFood from "./foodStore/dinner/dinner";
 import Head from "next/head";
-import ReactStars from "react-stars";
 import Thumbnail from "../thumbnail/thumbnail";
+import { FaCoffee, FaHamburger, FaUtensils } from "react-icons/fa";
 
 const Menu = () => {
   const breakfastFoods = useBreakfastFood();
   const lunchFoods = useLunchFood();
   const dinnerFoods = useDinnerFood();
 
-  const [showMenu, setShowMenu] = useState<string>("tab-1");  
+  const [showMenu, setShowMenu] = useState<string>("tab-1");
 
   return (
     <>
@@ -24,7 +24,7 @@ const Menu = () => {
       <div id="menu" className="container-xxl py-5 menu-items menu-section">
         <div className="container">
           <div className="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h5 className="section-title ff-secondary text-center text-primary fw-normal">
+            <h5 className="section-title ff-secondary text-success text-center text-primary fw-normal">
               Taomlar Menyusi
             </h5>
             <h1 className="mb-5">Eng Mashxur taomlar</h1>
@@ -41,10 +41,10 @@ const Menu = () => {
                   href="#tab-1"
                   onClick={() => setShowMenu("tab-1")}
                 >
-                  <i className="fa fa-coffee fa-2x text-success"></i>
+                  <FaCoffee className="text-success" size={32} />{" "}
                   <div className="ps-3">
                     <small className="text-body">Mashxur</small>
-                    <h6 className="mt-n1 mb-0">Nonushta uchun</h6>
+                    <h6 className="mt-n1 text-success mb-0">Nonushta uchun</h6>
                   </div>
                 </a>
               </li>
@@ -55,10 +55,10 @@ const Menu = () => {
                   href="#tab-2"
                   onClick={() => setShowMenu("tab-2")}
                 >
-                  <i className="fa fa-hamburger fa-2x text-success"></i>
+                  <FaHamburger className="text-success" size={32} />{" "}
                   <div className="ps-3">
                     <small className="text-body">Maxsus</small>
-                    <h6 className="mt-n1 mb-0">Tushlik uchun</h6>
+                    <h6 className="mt-n1 text-success mb-0">Tushlik uchun</h6>
                   </div>
                 </a>
               </li>
@@ -69,10 +69,10 @@ const Menu = () => {
                   href="#tab-3"
                   onClick={() => setShowMenu("tab-3")}
                 >
-                  <i className="fa fa-utensils fa-2x text-success"></i>
+                  <FaUtensils className="text-success" size={32} />{" "}
                   <div className="ps-3">
                     <small className="text-body">Ishtaxa ochar</small>
-                    <h6 className="mt-n1 mb-0">Kechki Tushlik uchun</h6>
+                    <h6 className="mt-n1 text-success mb-0">Kechki Tushlik uchun</h6>
                   </div>
                 </a>
               </li>

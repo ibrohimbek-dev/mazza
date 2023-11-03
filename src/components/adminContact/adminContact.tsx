@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link"
-
+import Link from "next/link";
+import { BsEnvelopeFill, BsTelegram, BsInstagram, BsFacebook, BsTelephoneFill } from 'react-icons/bs';
 
 const AdminContact = () => {
   const handleEmailClick = () => {
@@ -10,26 +10,43 @@ const AdminContact = () => {
   const handlePhoneClick = () => {
     const phoneNumber = "+8210 8337 9909";
     window.open(`tel:${phoneNumber}`, "_blank");
-  }; 
+  };
 
   return (
     <div className="form-group mb-3">
       <label className="mb-2">Admin bilan bog'lanish:</label>
       <div className="form-control contact-admin-icons">
-        <Link href={"#"} className="mr-2" onClick={handleEmailClick}>
-          <i className="bi bi-envelope-fill mr-1"></i>
+        <Link href="#" className="mr-2" onClick={handleEmailClick}>
+          <BsEnvelopeFill className="mr-1" />
         </Link>
-        <Link target="_blank" href="https://telegram.me/username" className="mr-2">
-          <i className="bi bi-telegram"></i>
+        <Link
+          target="_blank"
+          href="https://telegram.me/username"
+          className="mr-2"
+        >
+          <BsTelegram />
         </Link>
-        <Link target="_blank" href="https://www.instagram.com/username" className="mr-2">
-          <i className="bi bi-instagram"></i>
+        <Link
+          target="_blank"
+          href="https://www.instagram.com/username"
+          className="mr-2"
+        >
+          <BsInstagram />
         </Link>
-        <Link target="_blank" href="https://www.facebook.com/username" className="mr-2">
-          <i className="bi bi-facebook"></i>
+        <Link
+          target="_blank"
+          href="https://www.facebook.com/username"
+          className="mr-2"
+        >
+          <BsFacebook />
         </Link>
-        <Link target="_blank" href="#" className="mr-2" onClick={handlePhoneClick}>
-          <i className="bi bi-telephone-fill"></i>
+        <Link
+          target="_blank"
+          href="#"
+          className="mr-2"
+          onClick={handlePhoneClick}
+        >
+          <BsTelephoneFill />
         </Link>
       </div>
     </div>
