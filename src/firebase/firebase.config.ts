@@ -4,13 +4,13 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyB23zUCwnn3X6MjzAzqZb6SEACjjXVI4cU",
-  authDomain: "mazza-restaurant-aa375.firebaseapp.com",
-  projectId: "mazza-restaurant-aa375",
-  storageBucket: "mazza-restaurant-aa375.appspot.com",
-  messagingSenderId: "263444533908",
-  appId: "1:263444533908:web:5a33cb834eaac346ed5a81",
-  measurementId: "G-L931GRM8NH"
+  apiKey: "AIzaSyA1zkDkh0zH-sUdXFCCfm16IvIGr8x-d1k",
+  authDomain: "mazza-c6ad7.firebaseapp.com",
+  projectId: "mazza-c6ad7",
+  storageBucket: "mazza-c6ad7.appspot.com",
+  messagingSenderId: "202088897998",
+  appId: "1:202088897998:web:7ce6be8f7d80bbdf291f9f",
+  measurementId: "G-6VFG6SGSDE"
 };
 
 const app = initializeApp(firebaseConfig);
