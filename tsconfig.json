@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["body-parser"],
     "target": "es5",
     "lib": [
       "dom",
