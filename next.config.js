@@ -5,7 +5,7 @@ const nextConfig = {
 		domains: ["image.tmdb.org", "rb.gy", "images.unsplash.com", "firebasestorage.googleapis.com"],
 	},
 	output: {
-    dir: 'out', // Set your desired output directory
+    dir: 'out',
   },
 };
 
