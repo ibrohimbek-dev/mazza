@@ -5,10 +5,11 @@ import { Hero } from "@/components";
 import $ from "jquery";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Link from "next/link";
-import { auth } from "@/firebase/firebase.config";
 import { AuthContext } from "@/context/auth.context";
 import Image from "next/image";
 import { FaUtensils } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState<string>("");
@@ -255,7 +256,7 @@ const Header = () => {
           </div>
         </nav>
 
-        <Hero />
+        {/* <Hero /> */}
       </header>
     </>
   );

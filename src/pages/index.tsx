@@ -3,7 +3,7 @@ import React from "react";
 import {
   About,
   BackToTop,
-  Booking,  
+  Booking,
   Footer,
   Header,
   Menu,
@@ -11,13 +11,14 @@ import {
   Spinner,
   Teams,
   Testimonial,
-  MyModal
+  MyModal,
+  Hero,
 } from "@/components";
 import Head from "next/head";
 import { useInfoStore } from "@/store";
 
 const Home = () => {
-  const {modal} = useInfoStore();
+  const { modal } = useInfoStore();
 
   return (
     <>
@@ -33,21 +34,21 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      
-      <Header />      
 
-      <main>      
+      <main className="main-container">
+        <Header />
+        <Hero />
         <Services />
         <About />
         <Menu />
         <Booking />
         <Teams />
         <Testimonial />
-        <Footer />        
-        <BackToTop />           
+        <Footer />
+        <BackToTop />
       </main>
 
-      {modal && <MyModal/>}
+      {modal && <MyModal />}
     </>
   );
 };

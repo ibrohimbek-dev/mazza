@@ -6,6 +6,23 @@
   --dark: #0f172b;
 }
 
+.main-container {
+  min-width: 30rem;
+  width: 100%;   
+}
+
+.header-class .navbar {
+  width: 100%;
+  background: transparent !important;  
+}
+
+@media (max-width: 400px) {
+  .main-container {
+    width: 100%;
+  }
+}
+
+
 
 .ff-secondary {
   font-family: "Pacifico", cursive;
@@ -147,12 +164,6 @@ a {
 
 .header-class .show a {
   border-bottom: 1px solid #ccc;    
-}
-
-.header-class .navbar {
-  width: 100%;
-  background: transparent !important;
-  position: fixed;
 }
 
 .header-class .sticky-top {
