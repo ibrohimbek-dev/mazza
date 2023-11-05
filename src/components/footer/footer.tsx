@@ -88,9 +88,8 @@ const Footer = () => {
               <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                 &copy;{" "}
                 <a className="border-bottom" href="#">
-                  Mazza Oshxonasi
-                </a>
-                , Barcha Huquqlar himoyalangan
+                  Mazza Oshxonasi,
+                </a>Barcha Huquqlar himoyalangan
               </div>
               <div className="col-md-6 text-center text-md-end">
                 <div className="footer-menu">
